@@ -325,6 +325,7 @@ export const SubstrateDestinationAdaptorProvider = ({
         events.forEach((record) => {
           // extract the phase, event and the event types
           const { event, phase } = record;
+          if (!event) return;
           const types = event.typeDef;
           // show what we are busy with
           console.log(

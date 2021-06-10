@@ -273,7 +273,7 @@ export const EVMHomeAdaptorProvider = ({
       const erc20Decimals = tokens[tokenAddress].decimals;
 
       const data =
-        "0x" +
+        utils.hexZeroPad(tokenAddress, 32) +
         utils
           .hexZeroPad(
             // TODO Wire up dynamic token decimals

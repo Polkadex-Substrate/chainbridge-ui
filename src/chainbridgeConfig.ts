@@ -101,14 +101,16 @@ export const chainbridgeConfig: ChainbridgeConfig = {
     // },
     {
       chainId: 0,
-      networkId: 5,
-      name: "Ethereum - Local",
+      networkId: 4,
+      name: "Ethereum - Rinkeby",
       decimals: 18,
-      bridgeAddress: "0x62877dDCd49aD22f5eDfc6ac108e9a4b5D2bD88B",
-      erc20HandlerAddress: "0x3167776db165D8eA0f51790CA2bbf44Db5105ADF",
-      rpcUrl: "http://localhost:8545",
+      bridgeAddress: "0x971d2A858691803e0241568cD2F5995042c72b6C",
+      erc20HandlerAddress: "0x11eee3277B3AE52Cd184D2f076Aa791ac2e42fB2",
+      rpcUrl: "ws://rinkeby.infura.io/ws/v3/aee9bdc5d4b649b2817dbb7f29e26c6b",
       type: "Ethereum",
+      blockExplorer: "https://rinkeby.etherscan.io",
       nativeTokenSymbol: "ETH",
+      deployedBlockNumber: 3554182,
       tokens: [
         // {
         //   address: "0x735B895bCb37cBba5812154f4F34480EcE1B672C",
@@ -119,15 +121,16 @@ export const chainbridgeConfig: ChainbridgeConfig = {
         //     "0x000000000000000000000023A9FD05ef0c5fb9dDE964C4d4191A169Fd221f802",
         // },
         {
-          address: "0x21605f71845f372A9ed84253d2D024B7B10999f4",
-          name: "TOKEN",
-          symbol: "TOKEN",
+          address: "0xCb82E435e4665FDA7CC0E6cEd374085D850F23A8",
+          name: "An ERC20",
+          symbol: "ERC20",
           imageUri: ETHIcon,
           resourceId:
             "0x000000000000000000000000000000c76ebe4a02bbc34786d860b355f5a5ce00",
         },
       ],
     },
+
     {
       chainId: 1,
       name: "Substrate - Local",

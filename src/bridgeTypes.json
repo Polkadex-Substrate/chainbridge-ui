@@ -4,8 +4,8 @@
   "ResourceId": "[u8; 32]",
   "DepositNonce": "u64",
   "ProposalVotes": {
-    "votes_for": "Vec<AccountId>",
-    "votes_against": "Vec<AccountId>",
+    "votes_for": "Vec<MultiAddress>",
+    "votes_against": "Vec<MultiAddress>",
     "status": "enum"
   },
   "Erc721Token": {
@@ -13,6 +13,35 @@
     "metadata": "Vec<u8>"
   },
   "TokenId": "U256",
-  "Address": "AccountId",
-  "LookupSource": "AccountId"
+  "Address": "MultiAddress",
+  "LookupSource": "MultiAddress",
+  "AssetId": {
+    "_enum": [
+      "POLKADEX",
+      "DOT",
+      "CHAINSAFE"
+    ]
+  },
+  "CHAINSAFE": "H160",
+  "CurrencyIdOf": "AssetId",
+  "CurrencyId": "AssetId",
+  "ShardIdentifier": "H256",
+  "BalanceOf": "Balance",
+  "AccountInfo": "AccountInfoWithTripleRefCount",
+  "AccountInfoWithTripleRefCount": {
+    "nonce": "Index",
+    "refcount": "RefCount",
+    "providers": "RefCount",
+    "sufficients": "RefCount",
+    "sufficients1": "RefCount",
+    "sufficients2": "RefCount",
+    "sufficients3": "RefCount",
+    "sufficients4": "RefCount",
+    "data": "AccountData"
+  },
+  "AccountData": {
+    "free": "u128",
+    "reserved": "u128",
+    "frozen": "u128"
+  }
 }
